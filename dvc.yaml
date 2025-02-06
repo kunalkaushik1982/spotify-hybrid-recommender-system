@@ -1,9 +1,17 @@
 stages:
+  data_download:
+    cmd: python data_download.py
+    deps:
+      - data_download.py 
+    outs: 
+      - data/Music Info.csv
+      - data/User Listening History.csv
+
   data_cleaning:
     cmd: python data_cleaning.py
     deps:
       - data/Music Info.csv
-      - src/data_cleaning.py
+      - data_cleaning.py
     outs: 
       - data/cleaned_data.csv
 

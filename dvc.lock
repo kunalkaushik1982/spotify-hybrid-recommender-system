@@ -7,7 +7,7 @@ stages:
       hash: md5
       md5: e63b74919a3cdada5c804df4666391c9
       size: 14985870
-    - path: src/data_cleaning.py
+    - path: data_cleaning.py
       hash: md5
       md5: 1fe67a28d329e1a186ef0b0dfc9d8cfc
       size: 2026
@@ -84,3 +84,19 @@ stages:
       hash: md5
       md5: 86795d76d28b60c886b293b2f3d5c3c7
       size: 2977348
+  data_download:
+    cmd: python data_download.py
+    deps:
+    - path: data_download.py
+      hash: md5
+      md5: dca017d1f5c8ee3dc5d3e1651bd2cc88
+      size: 1463
+    outs:
+    - path: data/Music Info.csv
+      hash: md5
+      md5: e63b74919a3cdada5c804df4666391c9
+      size: 14985870
+    - path: data/User Listening History.csv
+      hash: md5
+      md5: 3a12e713844195171c7040c051d6d4ae
+      size: 602515573
